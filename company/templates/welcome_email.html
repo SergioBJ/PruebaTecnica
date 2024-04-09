@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenido/a a la Empresa</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+    .header {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+    }
+    .content {
+        padding: 20px;
+    }
+    .footer {
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px;
+        font-size: 0.8em;
+        color: #666;
+    }
+    ul {
+        padding-left: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Bienvenido/a a la Empresa</h1>
+    </div>
+    <div class="content">
+        <p>Hola {{ first_name }},</p>
+        <p>Estamos muy contentos de darte la bienvenida a nuestro equipo. Aquí está un resumen de tus funciones principales:</p>
+        <ul>
+            {% for function in job_functions %}
+            <li>{{ function }}</li>
+            {% endfor %}
+        </ul>
+        <p>¡Estamos emocionados de comenzar a trabajar contigo y ver todas las cosas increíbles que lograremos juntos!</p>
+    </div>
+    <div class="footer">
+        Saludos cordiales,<br>
+    </div>
+</div>
+</body>
+</html>
